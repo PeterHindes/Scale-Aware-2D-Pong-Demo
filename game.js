@@ -24,6 +24,10 @@ function resizeCanvas() {
 //Call once to set canvas size on first load
 resizeCanvas();
 
+
+
+
+
 //Location Vars
   //Ball
     //Position
@@ -42,6 +46,8 @@ resizeCanvas();
     var p1;
     //Player two
     var p2;
+
+
 
 
 
