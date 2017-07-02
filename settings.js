@@ -1,6 +1,6 @@
 //Settings
 //Smoothnes of animation
-const framesPerSecond = 1200;
+const framesPerSecond = 30;
 
 //Height and Width of the game paddles in percent of canvas
 const paddleWidthPercent = 3;

@@ -25,9 +25,12 @@ function resizeCanvas() {
 resizeCanvas();
 
 //Location Vars
-  //Ball Position
-    var ballX = 5;
-    var ballY = 5;
+  //Ball
+    //Position
+      var ballX = 5;
+      var ballY = 5;
+    //Speed
+      var ballSpeed = 35;
   //paddle size and offset from edge
     //paddle size
     var paddleHeight;
@@ -81,5 +84,11 @@ function drawGameCanvas() {
 }
 
 function updateGameVariables() {
-  ballX += fFM(50,framesPerSecond);
+  if ((ballX+ballDiameterPercent) >= 100 || ballX <= 0){
+    ballSpeed *= -1
+    console.log("Big");
+  }
+  //console.log(canvas.width);
+  //console.log(ballX);
+  ballX += fFM(ballSpeed,framesPerSecond);
 }
