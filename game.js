@@ -1,21 +1,17 @@
-//Import functions from pertersJSGameFunctionLibrary
+//Deffinitions
+const canvas = document.getElementById('gameCanvas');
+const canvasContext = canvas.getContext('2d');
+
+//Import functions from pertersJSGameFunctionLibrary.js
 imported = document.createElement('script');
 imported.src = './petersJSGameFunctionLibrary.js';
 document.head.appendChild(imported);
 delete imported;
-
-//Constants
-const framesPerSecond = 60;
-
-const paddleWidthPercent = 3;
-const paddleHeightPercent = 22;
-const paddleEdgeOffsetPercent = 0.5;
-
-const ballDiameterPercent = 2.5;
-
-  //Deffinitions
-const canvas = document.getElementById('gameCanvas');
-const canvasContext = canvas.getContext('2d');
+//Import settings from settings.js
+imported = document.createElement('script');
+imported.src = './settings.js';
+document.head.appendChild(imported);
+delete imported;
 
 
 //Scaling Vars
@@ -26,16 +22,14 @@ var p1;
 var p2;
 
 //Scaler
+//Listen For Resize Event
 window.addEventListener('resize', resizeCanvas, false);
+//What to do on resize
 function resizeCanvas() {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-
-
-
-  p1 = (document.getElementById('gameCanvas').height / 2) - paddleHeight;
-  p2 = (document.getElementById('gameCanvas').height / 2) - paddleHeight;
 }
+//Call once to set canvas size on first load
 resizeCanvas();
 
 //Changing Vars
