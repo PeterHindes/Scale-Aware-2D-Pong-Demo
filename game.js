@@ -82,6 +82,7 @@ function drawGameCanvas() {
   );
 
 }
+
 function updateGameVariables() {
   ballX += fFM(5);
 }
