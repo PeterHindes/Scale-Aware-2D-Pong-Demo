@@ -13,14 +13,6 @@ imported.src = './settings.js';
 document.head.appendChild(imported);
 delete imported;
 
-
-//Scaling Vars
-var paddleHeight;
-var paddleWidth;
-var paddleEdgeOffset;
-var p1;
-var p2;
-
 //Scaler
 //Listen For Resize Event
 window.addEventListener('resize', resizeCanvas, false);
@@ -34,8 +26,14 @@ resizeCanvas();
 
 //Changing Vars
   //Moving Vars
-var ballX = 5;
-var ballY = 5;
+    var ballX = 5;
+    var ballY = 5;
+  //Scaling Vars
+    var paddleHeight;
+    var paddleWidth;
+    var paddleEdgeOffset;
+    var p1;
+    var p2;
 
 
 
