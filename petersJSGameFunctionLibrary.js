@@ -39,7 +39,7 @@
   //fFM stands for Frame Free Movement
   //Calculates distance per frame for a distance to be moved in a second at a specified framerate (pixel/percent agnostic)
   function fFM(movePerSecond,framesPerSecond) {
-    return (movePerSecond/framesPerSecond)
+    return (movePerSecond/framesPerSecond);
   }
 
   //cFS stands for Canvas Free Scaling

@@ -24,15 +24,20 @@ function resizeCanvas() {
 //Call once to set canvas size on first load
 resizeCanvas();
 
-//Changing Vars
-  //Moving Vars
+//Location Vars
+  //Ball Position
     var ballX = 5;
     var ballY = 5;
-  //Scaling Vars
+  //paddle size and offset from edge
+    //paddle size
     var paddleHeight;
     var paddleWidth;
+    //offset from edge
     var paddleEdgeOffset;
+  //Player (Paddle) positions
+    //Player one
     var p1;
+    //Player two
     var p2;
 
 
@@ -44,11 +49,11 @@ window.onload = function() {
 
 function drawGameCanvas() {
 
+  //Update the game variables BEFORE rendering
   updateGameVariables();
 
   //Background
-  canvasContext.fillStyle = 'black';
-  canvasContext.fillRect(0,0,canvas.width,canvas.height);
+  Rect('black',0,0,canvas.width,canvas.height);
 
   //Ball
   canvasContext.fillStyle = 'pink';
@@ -76,5 +81,5 @@ function drawGameCanvas() {
 }
 
 function updateGameVariables() {
-  ballX += fFM(5);
+  ballX += fFM(50,framesPerSecond);
 }
