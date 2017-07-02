@@ -27,8 +27,8 @@ resizeCanvas();
 //Location Vars
   //Ball
     //Position
-      var ballX = 5;
-      var ballY = 5;
+      var ballX;
+      var ballY;
     //Speed
       var ballSpeed = 35;
   //paddle size and offset from edge
@@ -45,10 +45,20 @@ resizeCanvas();
 
 
 
-
+//Start Game
 window.onload = function() {
   setInterval(drawGameCanvas, 1000/framesPerSecond);
 }
+
+
+function resetGame() {
+
+  ballX = 50;
+  ballY = 50;
+
+}
+resetGame();
+
 
 function drawGameCanvas() {
 
