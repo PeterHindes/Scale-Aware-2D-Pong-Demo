@@ -1,3 +1,5 @@
+{//Head (init the canvas, import functions and, setup functions)
+
 //Deffinitions
 const canvas = document.getElementById('gameCanvas');
 const canvasContext = canvas.getContext('2d');
@@ -18,25 +20,31 @@ delete imported;
 window.addEventListener('resize', resizeCanvas, false);
 //What to do on resize
 function resizeCanvas() {
+  //Resize canvas to meet screen
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 }
-//Call once to set canvas size on first load
+//Call once to set canvas size on first load (does not loop)
 resizeCanvas();
 
-
+}
 
 
 
 //Location Vars
-  //Ball
-    //Position
+
+  {//Ball
+    {//Position
       var ballX;
       var ballY;
-    //Speed
+    }
+    {//Speed
       var ballSpeed = 35;
-  //paddle size and offset from edge
-    //paddle size
+    }
+  }
+
+  //Paddle
+    //Paddle Size
     var paddleHeight;
     var paddleWidth;
     //offset from edge
@@ -53,7 +61,7 @@ resizeCanvas();
 
 //Start Game
 window.onload = function() {
-  setInterval(drawGameCanvas, 1000/framesPerSecond);
+  setInterval(drawGameCanvas, 1000/*miliseconds*//framesPerSecond);
 }
 
 
