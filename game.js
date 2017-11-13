@@ -1,45 +1,47 @@
+//This is a pong game that scales (it need the other files from the github to work)
+
+
 {//Head (init the canvas, import functions and, setup functions)
-
-//Deffinitions
-const canvas = document.getElementById('gameCanvas');
-const canvasContext = canvas.getContext('2d');
-
-//Import functions from pertersJSGameFunctionLibrary.js
-imported = document.createElement('script');
-imported.src = './petersJSGameFunctionLibrary.js';
-document.head.appendChild(imported);
-delete imported;
-//Import settings from settings.js
-imported = document.createElement('script');
-imported.src = './settings.js';
-document.head.appendChild(imported);
-delete imported;
-
-//Scaler
-//Listen For Resize Event
-window.addEventListener('resize', resizeCanvas, false);
-//What to do on resize
-function resizeCanvas() {
-  //Resize canvas to meet screen
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-}
-//Call once to set canvas size on first load (does not loop)
-resizeCanvas();
-
-}
+  //Deffinitions
+  const canvas = document.getElementById('gameCanvas');
+  const canvasContext = canvas.getContext('2d');
 
 
+  //Import functions from pertersJSGameFunctionLibrary.js
+  imported = document.createElement('script');
+  imported.src = './petersJSGameFunctionLibrary.js';
+  document.head.appendChild(imported);
+  delete imported;
 
-//Location Vars
+  //Import settings from settings.js
+  imported = document.createElement('script');
+  imported.src = './settings.js';
+  document.head.appendChild(imported);
+  delete imported;
 
+
+  //Scaler
+  //Listen For Resize Event
+  window.addEventListener('resize', resizeCanvas, false);
+  //What to do on resize
+  function resizeCanvas() {
+    //Resize canvas to meet screen
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  //Call once to set canvas size on first load (does not loop)
+  resizeCanvas();
+}//Head (init the canvas, import functions and, setup functions)
+
+
+{//Init Vars
   {//Ball
     {//Position
       var ballX;
       var ballY;
     }
     {//Speed
-      var ballSpeed = 35;
+      var ballSpeed;
     }
   }
 
@@ -54,9 +56,11 @@ resizeCanvas();
     var p1;
     //Player two
     var p2;
+}//Init Vars
 
-
-
+{//Set starting variales
+  ballSpeed = 35;
+}//Set starting variales
 
 
 //Start Game
