@@ -1,11 +1,10 @@
 //This is a pong game that scales (it need the other files from the github to work)
+//Notation for the atom extension custom-folds to allow colapsing code
 
-
-{//Head (init the canvas, import functions and, setup functions)
-  //Deffinitions
+////<editor-fold> Head (init the canvas, import functions and, setup functions)
+  //Definitions
   const canvas = document.getElementById('gameCanvas');
   const canvasContext = canvas.getContext('2d');
-
 
   //Import functions from pertersJSGameFunctionLibrary.js
   imported = document.createElement('script');
@@ -31,36 +30,35 @@
   }
   //Call once to set canvas size on first load (does not loop)
   resizeCanvas();
-}//Head (init the canvas, import functions and, setup functions)
+////</editor-fold> Head (init the canvas, import functions and, setup functions)
 
 
-{//Init Vars
-  {//Ball
-    {//Position
+//<editor-fold> Init Vars
+  //<editor-fold> Ball
+    //Position
       var ballX;
       var ballY;
-    }
-    {//Speed
+    //Speed
       var ballSpeed;
-    }
-  }
+  //</editor-fold> Ball
 
-  //Paddle
-    //Paddle Size
+  //<editor-fold> Paddles
+    //Paddles Sizes
     var paddleHeight;
-    var paddleWidth;
-    //offset from edge
-    var paddleEdgeOffset;
+    var paddleWidth
+    //Offset from edge
+    var paddleEdgeOffset
   //Player (Paddle) positions
     //Player one
     var p1;
     //Player two
     var p2;
-}//Init Vars
+  //</editor-fold> Paddles
+//</editor-fold> Init Vars
 
-{//Set starting variales
+//<editor-fold> Set starting variales
   ballSpeed = 35;
-}//Set starting variales
+//</editor-fold> Set starting variales
 
 
 //Start Game

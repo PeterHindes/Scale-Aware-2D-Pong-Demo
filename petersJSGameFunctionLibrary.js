@@ -1,5 +1,4 @@
 //Rectangle drawing functions with special inbuilt calculations
-//<==
   //Draw a rectangle based on percent of canvas not pixels
   function scaleRect(drawColor, xPercent,yPercent, widthPercent,heightPercent, maintainAspect) {
     //calculate pixel values
@@ -19,7 +18,7 @@
     canvasContext.fillStyle = drawColor;
     canvasContext.fillRect(xPixel,yPixel,	pixelWidth,pixelHeight);
   }
-//==>
+//Rectangle drawing functions with special inbuilt calculations
 
 //Transformitive functions
 //<==
