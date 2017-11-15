@@ -30,20 +30,18 @@
 
 //<editor-fold> Transformitive functions
 
-  //Calculates the mid point between a number and 0 (otherwise known as top or left) and rounds down on non intigers
+  // Calculates the mid point between a number and 0 (otherwise known as top or left) and rounds down on non intigers
   function intigerCenterCalc(toCenter) {
     return (Math.floor(toCenter / 2));
   }
 
-  //Calculates the mid point between 2 numers and rounds down on non intigers
+  // Calculates the mid point between 2 numers and rounds down on non intigers
   function intigerMidpointCalc(point1,point2) {
     return (Math.floor((point1 + point2) / 2 ));
   }
 
-
-  //fFM stands for Frame Free Movement
-  //Calculates distance per frame for a distance to be moved in a second at a specified framerate (pixel/percent agnostic)
-  function fFM(movePerSecond,framesPerSecond) {
+  // Calculates distance per frame for a distance to be moved in a second at a specified framerate (pixel/percent agnostic)
+  function frameFreeMovement(movePerSecond,framesPerSecond) {
     return (movePerSecond/framesPerSecond);
   }
 
@@ -81,13 +79,31 @@
   // cFS stands for Canvas Free Scaling
   // Calculates pixel location based on percent of canvas (standard (top/left)=0% to (botom/right)=100%)
   function cFS(percent,axis,maintainAspect) {
-    canvasFreeScaling(percent,axis,maintainAspect);
+    return (canvasFreeScaling(percent,axis,maintainAspect));
   }
 
   // cFSa stands for Canvas Free Scaling Array
   // Returns object containing x and y in pixels of 2 percent based coordinates
   function cFSa(percentX,percentY,maintainAspect) {
-    canvasFreeScalingArray(percentX,percentY,maintainAspect);
+    return (canvasFreeScalingArray(percentX,percentY,maintainAspect));
+  }
+
+  // fFM stands for Frame Free Movement
+  // Calculates distance per frame for a distance to be moved in a second at a specified framerate (pixel/percent agnostic)
+  function fFM(movePerSecond,framesPerSecond) {
+    return (frameFreeMovement(movePerSecond,framesPerSecond));
+  }
+
+  // iCC stans for Intiger Center Calc(ulator)
+  // Calculates the mid point between a number and 0 (otherwise known as top or left) and rounds down on non intigers
+  function iCC(toCenter) {
+    return (intigerCenterCalc(toCenter));
+  }
+
+  // iMC stands for Intiger Midpoint Calc(ulator)
+  // Calculates the mid point between 2 numers and rounds down on non intigers
+  function iMC(point1,point2) {
+    return (intigerMidpointCalc(point1,point2));
   }
 
 //</editor-fold> Aliases for functions with long names
