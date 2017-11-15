@@ -3,43 +3,32 @@
 //Notation for the atom extension custom-folds to allow colapsing code.
 
 //<editor-fold> Rectangle drawing functions with special inbuilt calculations
-  //Draw a rectangle based on percent of canvas not pixels
+
+  // Draw a rectangle based on percent of canvas not pixels
   function scaleRect(drawColor, xPercent,yPercent, widthPercent,heightPercent, maintainAspect) {
-    //calculate pixel values
+    // Calculate pixel values
     var pixelWidth = cFSa(widthPercent,heightPercent, maintainAspect).x;
     var pixelHeight = cFSa(widthPercent,heightPercent, maintainAspect).y;
     var xPixel = cFS(xPercent,'x',false);
     var yPixel = cFS(yPercent,'y',false);
 
-    //draw rectangle
+    // Draw rectangle
+    Rect(drawColor, xPixel,yPixel, pixelWidth,pixelHeight);
+    //canvasContext.fillStyle = drawColor;
+    //canvasContext.fillRect(xPixel,yPixel,	pixelWidth,pixelHeight);
+  }
+
+  // Draw a normal rectangle (based on pixels) with a color
+  function Rect(drawColor, xPixel,yPixel, pixelWidth,pixelHeight) {
+    // Draw rectangle
     canvasContext.fillStyle = drawColor;
     canvasContext.fillRect(xPixel,yPixel,	pixelWidth,pixelHeight);
   }
 
-  //Draw a normal rectangle with a color (based on pixels)
-  function Rect(drawColor, xPixel,yPixel, pixelWidth,pixelHeight) {
-    //draw rectangle
-    canvasContext.fillStyle = drawColor;
-    canvasContext.fillRect(xPixel,yPixel,	pixelWidth,pixelHeight);
-  }
 //</editor-fold> Rectangle drawing functions with special inbuilt calculations
 
-//Transformitive functions
 
-
-/*  //Calculates the mid point between a number and 0 (rounds down on non intigers (otherwise known as top or left depending on if you use the result or x or y))
-  function intigerCenterCalc(toCenter) {
-    //Check if center is inbetween pixels
-    if ( (toCenter % 2) == 0 ) {
-      return (toCenter / 2);
-    } else if ( (toCenter % 2) == 1 ) {	//Default to top/left pixel if centering lands on mid pixel
-      return ((toCenter / 2) - 0.5);
-    } else {
-      console.log("Error Calculating intigerCenter. Check Your Code!");
-      return -50;
-    }
-  }
-*/
+//<editor-fold> Transformitive functions
 
   //Calculates the mid point between a number and 0 (otherwise known as top or left) and rounds down on non intigers
   function intigerCenterCalc(toCenter) {
@@ -58,9 +47,8 @@
     return (movePerSecond/framesPerSecond);
   }
 
-  //cFS stands for Canvas Free Scaling
-  //calculates pixel location based on percent of canvas (standard top left to botom right)
-  function cFS(percent,axis,maintainAspect){
+  // Calculates pixel location based on percent of canvas (standard (top/left)=0% to (botom/right)=100%)
+  function canvasFreeScaling(percent,axis,maintainAspect){
     var Refrence;
 
     if ( maintainAspect ) {
@@ -72,17 +60,53 @@
         Refrence = canvas.height;
       }
     }
-
     return (Refrence * (percent/100));
-
   }
-  //REQUIRES cFS TO WORK!!! (look up^)
-  //returns object containing x and y in pixels of 2 percent based coordinates
-  function cFSa(percentX,percentY,maintainAspect){
+
+  //     REQUIRES cFS (canvasFreeScaling) TO WORK!!! (keep this in mind if you plan to just rip one function from this library for optomization)
+  // Returns object containing x and y in pixels of 2 percent based coordinates
+  function canvasFreeScalingArray(percentX,percentY,maintainAspect){
     var coordinates = {
-      x: cFS(percentX,'x',maintainAspect) ,
-      y: cFS(percentY,'y',maintainAspect)
+      x: canvasFreeScaling(percentX,'x',maintainAspect) ,
+      y: canvasFreeScaling(percentY,'y',maintainAspect)
     }
     return  coordinates;
   }
-//==>
+
+//</editor-fold> Transformitive functions
+
+
+//<editor-fold> Aliases for functions with long names
+
+  // cFS stands for Canvas Free Scaling
+  // Calculates pixel location based on percent of canvas (standard (top/left)=0% to (botom/right)=100%)
+  function cFS(percent,axis,maintainAspect) {
+    canvasFreeScaling(percent,axis,maintainAspect);
+  }
+
+  // cFSa stands for Canvas Free Scaling Array
+  // Returns object containing x and y in pixels of 2 percent based coordinates
+  function cFSa(percentX,percentY,maintainAspect) {
+    canvasFreeScalingArray(percentX,percentY,maintainAspect);
+  }
+
+//</editor-fold> Aliases for functions with long names
+
+
+//<editor-fold> Depricated and or Broken functions
+
+/*  //Calculates the mid point between a number and 0 (rounds down on non intigers (otherwise known as top or left depending on if you use the result or x or y))
+  function intigerCenterCalc(toCenter) {
+    //Check if center is inbetween pixels
+    if ( (toCenter % 2) == 0 ) {
+      return (toCenter / 2);
+    } else if ( (toCenter % 2) == 1 ) {	//Default to top/left pixel if centering lands on mid pixel
+      return ((toCenter / 2) - 0.5);
+    } else {
+      console.log("Error Calculating intigerCenter. Check Your Code!");
+      return -50;
+    }
+  }
+*/
+
+//</editor-fold> Depricated and or Broken functions
