@@ -26,7 +26,7 @@
     //Update the game variables BEFORE rendering
     updateGameVariables();
 
-    //Background
+    //Redraw Background
     Rect('black',0,0,canvas.width,canvas.height);
 
     //Ball
