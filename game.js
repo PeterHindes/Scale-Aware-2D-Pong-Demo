@@ -2,27 +2,30 @@
 //Notation for the atom extension custom-folds to allow collapsing code.
 
 //<editor-fold> Head (init the canvas, import functions and, setup functions)
+
+  //<editor-fold> Imports
+    //Import functions from pertersJSGameFunctionLibrary.js
+    imported = document.createElement('script');
+    imported.src = './petersJSGameFunctionLibrary.js';
+    document.head.appendChild(imported);
+    delete imported;
+
+    //Import functions from gameSpecificFunctions.js
+    imported = document.createElement('script');
+    imported.src = './gameSpecificFunctions.js';
+    document.head.appendChild(imported);
+    delete imported;
+
+    //Import settings from settings.js
+    imported = document.createElement('script');
+    imported.src = './settings.js';
+    document.head.appendChild(imported);
+    delete imported;
+  //</editor-fold> Imports
+
   //Definitions
-  const canvas = document.getElementById('gameCanvas');
+  const canvas = document.getElementById(canvasName);
   const canvasContext = canvas.getContext('2d');
-
-  //Import functions from pertersJSGameFunctionLibrary.js
-  imported = document.createElement('script');
-  imported.src = './petersJSGameFunctionLibrary.js';
-  document.head.appendChild(imported);
-  delete imported;
-
-  //Import functions from gameSpecificFunctions.js
-  imported = document.createElement('script');
-  imported.src = './gameSpecificFunctions.js';
-  document.head.appendChild(imported);
-  delete imported;
-
-  //Import settings from settings.js
-  imported = document.createElement('script');
-  imported.src = './settings.js';
-  document.head.appendChild(imported);
-  delete imported;
 
 
   //Scaler
