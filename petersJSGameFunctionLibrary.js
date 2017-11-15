@@ -1,6 +1,6 @@
 //This is a function library by Peter Hindes.
 //Scale your javascrypt game to meet the users screen dimensions!
-//Notation for the atom extension custom-folds to allow colapsing code.
+//Notation for the atom extension custom-folds to allow collapsing code.
 
 //<editor-fold> Rectangle drawing functions with special inbuilt calculations
 

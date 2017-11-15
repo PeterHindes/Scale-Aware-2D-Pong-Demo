@@ -1,5 +1,5 @@
-//This is a pong game that scales (it need the other files from the github to work)
-//Notation for the atom extension custom-folds to allow colapsing code.
+//This is a pong game that scales (it need the other files from the github repo to work)
+//Notation for the atom extension custom-folds to allow collapsing code.
 
 //<editor-fold> Head (init the canvas, import functions and, setup functions)
   //Definitions
@@ -9,6 +9,12 @@
   //Import functions from pertersJSGameFunctionLibrary.js
   imported = document.createElement('script');
   imported.src = './petersJSGameFunctionLibrary.js';
+  document.head.appendChild(imported);
+  delete imported;
+
+  //Import functions from gameSpecificFunctions.js
+  imported = document.createElement('script');
+  imported.src = './gameSpecificFunctions.js';
   document.head.appendChild(imported);
   delete imported;
 
@@ -56,6 +62,7 @@
   //</editor-fold> Paddles
 //</editor-fold> Init Vars
 
+
 //<editor-fold> Set starting variales
   ballSpeed = 35;
 //</editor-fold> Set starting variales
@@ -64,17 +71,8 @@
 //Start Game
 window.onload = function() {
   setInterval(drawGameCanvas, 1000/*miliseconds*//framesPerSecond);
+  resetGame();
 }
-
-
-function resetGame() {
-
-  ballX = 50;
-  ballY = 50;
-
-}
-resetGame();
-
 
 function drawGameCanvas() {
 
