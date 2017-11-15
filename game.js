@@ -70,6 +70,6 @@
 
 //Start Game
 window.onload = function() {
-  setInterval(drawGameCanvas, 1000/*miliseconds*//framesPerSecond);
   resetGame();
+  setInterval(drawGameCanvas, 1000/*miliseconds*//framesPerSecond);
 }
