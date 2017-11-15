@@ -1,7 +1,7 @@
 //This is a pong game that scales (it need the other files from the github to work)
 //Notation for the atom extension custom-folds to allow colapsing code
 
-////<editor-fold> Head (init the canvas, import functions and, setup functions)
+//<editor-fold> Head (init the canvas, import functions and, setup functions)
   //Definitions
   const canvas = document.getElementById('gameCanvas');
   const canvasContext = canvas.getContext('2d');
@@ -30,7 +30,7 @@
   }
   //Call once to set canvas size on first load (does not loop)
   resizeCanvas();
-////</editor-fold> Head (init the canvas, import functions and, setup functions)
+//</editor-fold> Head (init the canvas, import functions and, setup functions)
 
 
 //<editor-fold> Init Vars
