@@ -11,4 +11,6 @@ const paddleEdgeOffsetPercent = 0.5;
 const ballDiameterPercent = 2.5;
 
 //Game canvas element name in html file
-const canvasName = 'gameCanvas';
+const canvasName = "'gameCanvas'";
+
+console.log("Imported settings");

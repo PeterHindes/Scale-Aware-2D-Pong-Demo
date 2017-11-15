@@ -126,3 +126,6 @@
 */
 
 //</editor-fold> Depricated and or Broken functions
+
+
+console.log("Imported Game Function Library");

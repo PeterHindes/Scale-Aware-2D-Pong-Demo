@@ -4,6 +4,13 @@
 //<editor-fold> Head (init the canvas, import functions and, setup functions)
 
   //<editor-fold> Imports
+
+    //Import settings from settings.js
+    imported = document.createElement('script');
+    imported.src = './settings.js';
+    document.head.appendChild(imported);
+    delete imported;
+
     //Import functions from pertersJSGameFunctionLibrary.js
     imported = document.createElement('script');
     imported.src = './petersJSGameFunctionLibrary.js';
@@ -16,15 +23,16 @@
     document.head.appendChild(imported);
     delete imported;
 
-    //Import settings from settings.js
+    //Import aliases from aliases.js
     imported = document.createElement('script');
-    imported.src = './settings.js';
+    imported.src = './aliases.js';
     document.head.appendChild(imported);
     delete imported;
+
   //</editor-fold> Imports
 
   //Definitions
-  const canvas = document.getElementById(canvasName);
+  const canvas = document.getElementById('gameCanvas');
   const canvasContext = canvas.getContext('2d');
 
 

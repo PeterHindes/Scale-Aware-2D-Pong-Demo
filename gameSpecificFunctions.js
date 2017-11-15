@@ -13,7 +13,7 @@
   function updateGameVariables() {
     if ((ballX+ballDiameterPercent) >= 100 || ballX <= 0){
       ballSpeed *= -1
-      console.log("Big");
+      console.log("Bounce");
     }
     //console.log(canvas.width);
     //console.log(ballX);
@@ -55,3 +55,5 @@
   }
 
 //</editor-fold> Mass Operation functions
+
+console.log("Imported gsf");
