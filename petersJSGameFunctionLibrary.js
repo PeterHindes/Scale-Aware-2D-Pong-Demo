@@ -1,4 +1,8 @@
-//Rectangle drawing functions with special inbuilt calculations
+//This is a function library by Peter Hindes.
+//Scale your javascrypt game to meet the users screen dimensions!
+//Notation for the atom extension custom-folds to allow colapsing code.
+
+//<editor-fold> Rectangle drawing functions with special inbuilt calculations
   //Draw a rectangle based on percent of canvas not pixels
   function scaleRect(drawColor, xPercent,yPercent, widthPercent,heightPercent, maintainAspect) {
     //calculate pixel values
@@ -18,11 +22,12 @@
     canvasContext.fillStyle = drawColor;
     canvasContext.fillRect(xPixel,yPixel,	pixelWidth,pixelHeight);
   }
-//Rectangle drawing functions with special inbuilt calculations
+//</editor-fold> Rectangle drawing functions with special inbuilt calculations
 
 //Transformitive functions
-//<==
-  //Calculates the mid point between a number and 0 (rounds down on non intigers (otherwise known as top or left depending on if you use the result or x or y))
+
+
+/*  //Calculates the mid point between a number and 0 (rounds down on non intigers (otherwise known as top or left depending on if you use the result or x or y))
   function intigerCenterCalc(toCenter) {
     //Check if center is inbetween pixels
     if ( (toCenter % 2) == 0 ) {
@@ -34,6 +39,18 @@
       return -50;
     }
   }
+*/
+
+  //Calculates the mid point between a number and 0 (otherwise known as top or left) and rounds down on non intigers
+  function intigerCenterCalc(toCenter) {
+    return (Math.floor(toCenter / 2));
+  }
+
+  //Calculates the mid point between 2 numers and rounds down on non intigers
+  function intigerMidpointCalc(point1,point2) {
+    return (Math.floor((point1 + point2) / 2 ));
+  }
+
 
   //fFM stands for Frame Free Movement
   //Calculates distance per frame for a distance to be moved in a second at a specified framerate (pixel/percent agnostic)

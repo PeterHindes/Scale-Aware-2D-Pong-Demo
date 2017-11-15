@@ -1,5 +1,5 @@
 //This is a pong game that scales (it need the other files from the github to work)
-//Notation for the atom extension custom-folds to allow colapsing code
+//Notation for the atom extension custom-folds to allow colapsing code.
 
 //<editor-fold> Head (init the canvas, import functions and, setup functions)
   //Definitions
