@@ -2,6 +2,7 @@
 //Scale your javascrypt game to meet the users screen dimensions!
 //Notation for the atom extension custom-folds to allow collapsing code.
 
+
 //<editor-fold> Rectangle drawing functions with special inbuilt calculations
 
   // Draw a rectangle based on percent of canvas not pixels
@@ -20,6 +21,17 @@
 
   // Draw a normal rectangle (based on pixels) with a color
   function Rect(drawColor, xPixel,yPixel, pixelWidth,pixelHeight) {
+    // Draw rectangle
+    canvasContext.fillStyle = drawColor;
+    canvasContext.fillRect(xPixel,yPixel,	pixelWidth,pixelHeight);
+  }
+
+  function smartRect(drawColor, xPixel,yPixel, pixelXRad,pixelYRad) {
+
+    if {}
+
+    var pixelWidth = xPixel - pixelXRad;
+
     // Draw rectangle
     canvasContext.fillStyle = drawColor;
     canvasContext.fillRect(xPixel,yPixel,	pixelWidth,pixelHeight);

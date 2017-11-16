@@ -4,4 +4,6 @@
 //const canvas = document.getElementById(canvasName);
 //const canvasContext = canvas.getContext('2d');
 
+const intCheck = Number.isInteger;
+
 console.log("Imported aliases");
