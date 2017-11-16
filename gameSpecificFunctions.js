@@ -11,12 +11,11 @@
 
 
   function updateGameVariables() {
-    if ((ballX+ballDiameterPercent) >= 100 || ballX <= 0){
+    if ((ballX+ballDiameterPercent) >= 100 || ballX <= 0){ //We dont factor "diameter" because the ball (whick is a square) origonates on the left (I could fix this with a new function)
+      //Reverse the ball speed (equating to a bounce)
       ballSpeed *= -1
       console.log("Bounce");
     }
-    //console.log(canvas.width);
-    //console.log(ballX);
     ballX += fFM(ballSpeed,framesPerSecond);
   }
 

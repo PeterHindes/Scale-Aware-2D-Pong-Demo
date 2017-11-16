@@ -1,0 +1,14 @@
+// cFS stands for Canvas Free Scaling
+// Calculates pixel location based on percent of canvas (standard (top/left)=0% to (botom/right)=100%)
+
+// cFSa stands for Canvas Free Scaling Array
+// Returns object containing x and y in pixels of 2 percent based coordinates
+
+// fFM stands for Frame Free Movement
+// Calculates distance per frame for a distance to be moved in a second at a specified framerate (pixel/percent agnostic)
+
+// iCC stans for Intiger Center Calc(ulator)
+// Calculates the mid point between a number and 0 (otherwise known as top or left) and rounds down on non intigers
+
+// iMC stands for Intiger Midpoint Calc(ulator)
+// Calculates the mid point between 2 numers and rounds down on non intigers
