@@ -54,6 +54,8 @@
 
   // Calculates distance per frame for a distance to be moved in a second at a specified framerate (pixel/percent agnostic)
   function frameFreeMovement(movePerSecond,framesPerSecond) {
+    //Should probably impliment delta time, examine the current usage of this function to asses how to impliment    !!!!
+    //There is almost noticible diffrence in speed between "frames" (repeating speedups and slow downs)
     return (movePerSecond/framesPerSecond);
   }
 
