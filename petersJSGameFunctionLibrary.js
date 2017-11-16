@@ -26,6 +26,7 @@
     canvasContext.fillRect(xPixel,yPixel,	pixelWidth,pixelHeight);
   }
 
+  /*
   function smartRect(drawColor, xPixel,yPixel, pixelXRad,pixelYRad) {
 
     if {}
@@ -35,7 +36,7 @@
     // Draw rectangle
     canvasContext.fillStyle = drawColor;
     canvasContext.fillRect(xPixel,yPixel,	pixelWidth,pixelHeight);
-  }
+  }*/
 
 //</editor-fold> Rectangle drawing functions with special inbuilt calculations
 
@@ -43,12 +44,12 @@
 //<editor-fold> Transformitive functions
 
   // Calculates the mid point between a number and 0 (otherwise known as top or left) and rounds down on non Integers
-  function IntegerCenterCalc(toCenter) {
+  function integerCenterCalc(toCenter) {
     return (Math.floor(toCenter / 2));
   }
 
   // Calculates the mid point between 2 numers and rounds down on non Integers
-  function IntegerMidpointCalc(point1,point2) {
+  function integerMidpointCalc(point1,point2) {
     return (Math.floor((point1 + point2) / 2 ));
   }
 
@@ -111,13 +112,13 @@
   // iCC stands for Integer Center Calc(ulator)
   // Calculates the mid point between a number and 0 (otherwise known as top or left) and rounds down on non Integers
   function iCC(toCenter) {
-    return (IntegerCenterCalc(toCenter));
+    return (integerCenterCalc(toCenter));
   }
 
   // iMC stands for Integer Midpoint Calc(ulator)
   // Calculates the mid point between 2 numers and rounds down on non Integers
   function iMC(point1,point2) {
-    return (IntegerMidpointCalc(point1,point2));
+    return (integerMidpointCalc(point1,point2));
   }
 
 //</editor-fold> Aliases for functions with long names
