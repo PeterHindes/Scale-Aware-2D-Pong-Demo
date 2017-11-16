@@ -37,7 +37,7 @@
     Rect(
       'grey' ,
       cFS(0+(paddleEdgeOffsetPercent),'x',false) ,
-      cFS(50-intigerCenterCalc(paddleHeightPercent),'y',false) ,
+      cFS(50-integerCenterCalc(paddleHeightPercent),'y',false) ,
       cFSa(paddleWidthPercent,paddleHeightPercent,true).x ,
       cFSa(paddleWidthPercent,paddleHeightPercent,true).y
     );
@@ -46,7 +46,7 @@
     Rect(
       'grey' ,
       cFS(100+(-paddleEdgeOffsetPercent),'x',false)+(-cFS(paddleWidthPercent,'x',true)) ,
-      cFS(50-intigerCenterCalc(paddleHeightPercent),'y',false) ,
+      cFS(50-integerCenterCalc(paddleHeightPercent),'y',false) ,
       cFSa(paddleWidthPercent,paddleHeightPercent,true).x ,
       cFSa(paddleWidthPercent,paddleHeightPercent,true).y
     );
