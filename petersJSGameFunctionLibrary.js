@@ -53,6 +53,16 @@
     return (Math.floor((point1 + point2) / 2 ));
   }
 
+  // Calculates the mid point between 2 numers and rounds down on non Integers
+  function integerArrayMidpointCalc(point1x,point2x , point1y,point2y) {
+    var coordinates = {
+      x: Math.floor((point1x + point2x) / 2 ) ,
+      y: Math.floor((point1y + point2y) / 2 )
+    }
+
+    return coordinates;
+  }
+
   // Calculates distance per frame for a distance to be moved in a second at a specified framerate (pixel/percent agnostic)
   function frameFreeMovement(movePerSecond,framesPerSecond) {
     //Should probably impliment delta time, examine the current usage of this function to asses how to impliment    !!!!
@@ -83,7 +93,7 @@
       x: canvasFreeScaling(percentX,'x',maintainAspect) ,
       y: canvasFreeScaling(percentY,'y',maintainAspect)
     }
-    return  coordinates;
+    return coordinates;
   }
 
 //</editor-fold> Transformitive functions
@@ -119,6 +129,12 @@
   // Calculates the mid point between 2 numers and rounds down on non Integers
   function iMC(point1,point2) {
     return (integerMidpointCalc(point1,point2));
+  }
+
+  // iAMC stands for Integer Array Midpoint Calc(ulator)
+  // Calculates the mid point between 2 numers and rounds down on non Integers
+  function iAMC(point1x,point2x , point1y,point2y) {
+    return (integerArrayMidpointCalc(point1x,point2x , point1y,point2y));
   }
 
 //</editor-fold> Aliases for functions with long names
